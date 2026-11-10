@@ -1,9 +1,10 @@
 name: Trae AutoCheckin Daily
 
 on:
-  # 定时签到留给 fork 后自行开启（取消下面两行注释即可）
-  # schedule:
-  #   - cron: '23 16 * * *'  # 北京时间 00:23
+  schedule:
+    - cron: '15 16 * * *'  # 北京时间 00:15 早窗主签
+    - cron: '33 16 * * *'  # 北京时间 00:33 早窗补签
+    - cron: '5 17 * * *'   # 北京时间 01:05 兜底补签
   workflow_dispatch:
 
 concurrency:
